@@ -14,15 +14,25 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+Route::get('/', function(){
+    return Inertia::render('Homepage', [
+        'title' => 'Pullvis',
+        'description' => 'Selamat datang di Pullvis'
     ]);
 });
+
+Route::get('/facebook', function () {
+    return Inertia::render('Facebook/index');
+});
+
+Route::get('/tiktok', function () {
+    return Inertia::render('Tiktok/index');
+});
+
+Route::get('/instagram', function () {
+    return Inertia::render('Instagram/index');
+});
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
