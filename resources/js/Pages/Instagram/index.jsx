@@ -47,7 +47,7 @@ class index extends React.Component {
             items.data.video.map((item)=>(
                     <>
                         <p>id video : {item.id_post}</p>
-                        <p>thumbnail : <img src={item.thumbnail} /></p>
+                        <p>thumbnail : <img crossorigin="anonymous" src={item.thumbnail} /></p>
                         <p>caption : {item.caption}</p>
                         <p>like : {item.like_count}</p>
                         <p>comment count : {item.comment_count}</p>
