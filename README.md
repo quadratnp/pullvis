@@ -1,3 +1,7 @@
+Laravel v9.39.0
+
+
+install composer laravel breeze
 ```
 composer require laravel/breeze --dev
 ```
